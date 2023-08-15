@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist Dropdown</title>
+</head>
+<body>
+    <form>
+        <label for="name">Выберите имя:</label>
+        <input type="text" id="name" name="name" list="nameList">
+        <datalist id="nameList">
+            {% for name in names %}
+                <option value="{{ name }}">
+            {% endfor %}
+        </datalist>
+    </form>
+</body>
+</html>
